@@ -3,9 +3,9 @@ import java.util.*;
 public class luhnChecksum {
     public static void main(String[] args) {
 
-        Scanner codeTeste = new Scanner(System.in);
+        Scanner scanTest = new Scanner(System.in);
         System.out.println("Entrez le code à tester.");
-        String code = codeTeste.nextLine();
+        String code = scanTest.nextLine();
 
 
         int x = 1;
@@ -30,14 +30,13 @@ public class luhnChecksum {
 
         System.out.println("Pour " + code + " le résultat de la formule de Luhn est " + resultat + " et la clé est donc " + cle + ".");
 
-        Scanner testCle = new Scanner(System.in);
         System.out.println("Entrez la bonne clé.");
-        int cleTestee = codeTeste.nextInt();
+        int cleTestee = scanTest.nextInt();
 
         while (cleTestee != cle) {
             System.out.println("Mauvaise clé!");
             System.out.println("Entrez la bonne clé.");
-            cleTestee = codeTeste.nextInt();
+            cleTestee = scanTest.nextInt();
         }
         System.out.println("C'est la bonne clé!");
     }

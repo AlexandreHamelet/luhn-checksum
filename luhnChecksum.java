@@ -26,7 +26,10 @@ public class luhnChecksum {
         }
 
         String additionCle = String.valueOf(resultat);
-        int cle = 10 - Character.getNumericValue(additionCle.charAt(additionCle.length() - 1));
+        int cleT = Character.getNumericValue(additionCle.charAt(additionCle.length() - 1));
+        int cle=(0);
+        if (cleT != 0){cle = 10- cleT;}
+
 
         System.out.println("Pour " + code + " le résultat de la formule de Luhn est " + resultat + " et la clé est donc " + cle + ".");
 
